@@ -1,15 +1,90 @@
-<meta cherset="utf-8">
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
+<title>手机乐园X</title>
+<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
 <style>
+        #myInput {
+            background-image: url('https://static.runoob.com/images/mix/searchicon.png'); /* 搜索按钮 */
+            background-position: 10px 12px; /* 定位搜索按钮 */
+            background-repeat: no-repeat; /* 不重复图片 */
+            width: 75%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px; 
+        }
+        
+        #myTable {
+            border-collapse: collapse; 
+            width: 100%; 
+            border: 1px solid #ddd;
+            font-size: 18px; 
+        }
+        
+        #myTable th, #myTable td {
+            text-align: left;
+            padding: 12px;
+        }
+        
+        #myTable tr {
+            /* 表格添加边框 */
+            border-bottom: 1px solid #ddd; 
+        }
+        
+        #myTable tr.header, #myTable tr:hover {
+            /* 表头及鼠标移动过 tr 时添加背景 */
+            background-color: #f1f1f1;
+        }
+
 .tag {
     color: white;
     background-color: orange;
     display: inline-block;
     border-radius: 5px;
-    width: 30;
-    height: 20;
+    width: 30px;
+    height: 20px;
     font-size: 12px;
-    text-align: center;
 }
 </style>
-<span class="tag">标签</span>
+<script>
+        function myFunction() {
+          // 声明变量
+          var input, filter, table, tr, td, i;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+        
+          // 循环表格每一行，查找匹配项
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            } 
+          }
+        }
+    </script>
+</head>
+<body class="mdui-theme-primary-indigo mdui-theme-accent-pink">
+<div class="mdui-appbar">
+<div class="mdui-toolbar mdui-color-indigo">
+<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe338;</i></a>
+<a href="javascript:;" class="mdui-typo-title">手机乐园X</a>
+<div class="mdui-toolbar-spacer"></div>
+</div>
+</div>
+<div class="mdui-container-fluid">
+<hr>
+
+</div>
+<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+</body>
+</html>
