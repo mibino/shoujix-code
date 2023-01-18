@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>手机乐园X</title>
+<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+<style>
+        #myInput {
+            background-image: url('https://static.runoob.com/images/mix/searchicon.png'); /* 搜索按钮 */
+            background-position: 10px 12px; /* 定位搜索按钮 */
+            background-repeat: no-repeat; /* 不重复图片 */
+            width: 75%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px; 
+        }
+        
+        #myTable {
+            border-collapse: collapse; 
+            width: 100%; 
+            border: 1px solid #ddd;
+            font-size: 18px; 
+        }
+        
+        #myTable th, #myTable td {
+            text-align: left;
+            padding: 12px;
+        }
+        
+        #myTable tr {
+            /* 表格添加边框 */
+            border-bottom: 1px solid #ddd; 
+        }
+        
+        #myTable tr.header, #myTable tr:hover {
+            /* 表头及鼠标移动过 tr 时添加背景 */
+            background-color: #f1f1f1;
+        }
+
+.tag {
+    color: white;
+    background-color: orange;
+    display: inline-block;
+    border-radius: 5px;
+    width: 30px;
+    height: 20px;
+    font-size: 12px;
+}
+</style>
+<script>
+        function myFunction() {
+          // 声明变量
+          var input, filter, table, tr, td, i;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+        
+          // 循环表格每一行，查找匹配项
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            } 
+          }
+        }
+    </script>
+</head>
+<body class="mdui-theme-primary-indigo mdui-theme-accent-pink">
+<div class="mdui-appbar">
+<div class="mdui-toolbar mdui-color-indigo">
+<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe338;</i></a>
+<a href="javascript:;" class="mdui-typo-title">手机乐园X</a>
+<div class="mdui-toolbar-spacer"></div>
+</div>
+<div class="mdui-tab mdui-color-indigo" mdui-tab>
+<a href="#tab1" class="mdui-ripple mdui-ripple-white">
+<i class="mdui-icon material-icons">&#xe88a;</i>
+<label>首页</label>
+</a>
+<a href="#tab2" class="mdui-ripple mdui-ripple-white">
+<i class="mdui-icon material-icons">&#xe5c3;</i>
+<label>软件列表</label>
+</a>
+</div>
+</div>
+<div class="mdui-container-fluid">
+<hr>
+<div id="tab1">
+<h1>欢迎来到手机乐园X</h1>
+<p>来自星辰帝国的某位网页程序员为了纪念手机乐园敲出来的。</p>
+<p>鸣谢MDUI(mdui.org),如果MDUI无法正常显示的话请告诉我，我会更换CDN。</p>
+<p>邮箱:mibino@163.com mibino@bilibili.sale</p>
+</div>
+</a>
+</div>
+<div id="tab2">
+<center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="搜索..."></center>
+<table id="myTable">
+<tbody>
+<tr class="header">
+<th style="width:60%;">软件</th>
+</tr>
+<tr>
+<td>
+<center><img src="logo/minecraft.png" width="190" height="190"/></center>
+<center><h2>Minecraft Bedrock Edition</h2></center>
+<center><div class="mdui-chip">
+      <span class="mdui-chip-icon mdui-color-orange"><i class="mdui-icon material-icons">&#xe338;</i></span>
+      <span class="mdui-chip-title">游戏</span>
+    </div></center>
+<center><p style="color: gray;">新游戏、新更新、新畅玩方式应有尽有，快来加入最大的游戏社区之一，今天就开启创作之旅吧！</p>
+</center>
+<center><a href="https://apk.blmcpia.com/" button class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-color-theme-accent mdui-ripple">下载</button></a></center>
+</td>
+</tr>
+<tr>
+<td>
+<center><img src="logo/qq.png" width="200" height="200"/></center>
+<center><h2>QQ</h2></center>
+<center><div class="mdui-chip">
+      <span class="mdui-chip-icon mdui-color-blue"><i class="mdui-icon material-icons">&#xe0b7;</i></span>
+      <span class="mdui-chip-title">聊天</span>
+    </div></center>
+<center><p style="color: gray;">QQ,乐在沟通。</p>
+</center>
+<center><a href="https://downv6.qq.com/qqweb/QQ_1/android_apk/Android_8.9.28.10155_537147618_64.apk" button class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-color-theme-accent mdui-ripple">下载</button></a></center>
+</td>
+</tr>
+<tr>
+<td>
+<center><img src="https://webinput.nie.netease.com/img/mc/logo.png" width="256" height="73" alt="logo"></center>
+<center><h2>我的世界</h2></center>
+<center><div class="mdui-chip">
+      <span class="mdui-chip-icon mdui-color-orange"><i class="mdui-icon material-icons">&#xe338;</i></span>
+      <span class="mdui-chip-title">游戏</span>
+    </div></center>
+<center><p style="color: gray;">从一个方块里，能诞生多少个世界？《伍六七》重磅联动开启！让我们进入动漫世界，与阿七和梅花十三等角色一起开启方块世界冒险，大年初一登录还能免费获得鸡大保伙伴！与中国航天一起探索宇宙世界，携手中国航天文创推出全新礼包，乘上闪耀机甲畅游宇宙！多人联机生存玩法《异星生存：迷航》上线，与好友探索四大行星！冒险家们，前方还有更多精彩世界等待着你，赶快启程吧！</p>
+</center>
+<center><a href="http://mc.163.com/" button class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-color-theme-accent mdui-ripple">下载</button></a></center>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+</body>
+</html>
