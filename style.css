@@ -1,0 +1,15 @@
+.button {
+	height: 30px;
+	width:  100px;
+	background-color: #d8d8d8; /* 浏览器不支持时显示 */
+    background-image: linear-gradient(#d8d8d8, #c2c2c2);
+	border-radius: 5px;
+    border: 2px solid #aaa;
+}
+	
+.button:hover {
+	background-color: #d8d8d8; /* 浏览器不支持时显示 */
+    background-image: linear-gradient(#c2c2c2, #d8d8d8);
+	border-radius: 5px;
+    border: 2px solid #aaa;
+}
