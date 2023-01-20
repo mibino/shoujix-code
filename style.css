@@ -13,3 +13,13 @@
 	border-radius: 5px;
     border: 2px solid #aaa;
 }
+
+.button-not {
+	height: 30px;
+	width:  100px;
+	background-color: #bbb; /* 浏览器不支持时显示 */
+    background-image: linear-gradient(#bbb, #aaa);
+	border-radius: 5px;
+    border: 2px solid #aaa;
+    color: white;
+}
